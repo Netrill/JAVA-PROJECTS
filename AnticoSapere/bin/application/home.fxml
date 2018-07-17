@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="800.0" maxWidth="800.0" minHeight="800.0" minWidth="700.0" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeController">
+   <top>
+      <Label prefHeight="162.0" prefWidth="614.0" style="-: black;" text="       TITOLO APPLICAZIONE" textAlignment="CENTER" textFill="#c61aa4" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="44.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </Label>
+   </top>
+   <center>
+      <ImageView fitHeight="422.0" fitWidth="447.0" pickOnBounds="true" preserveRatio="true" translateY="-20.0" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../immagini/logo.jpg" />
+         </image>
+      </ImageView>
+   </center>
+   <bottom>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField id="t_login1" fx:id="t_login1" maxHeight="50.0" maxWidth="250.0" translateX="280.0" />
+            <PasswordField fx:id="t_login2" maxHeight="50.0" maxWidth="250.0" translateX="280.0" translateY="15.0" />
+            <Button fx:id="b_login" minWidth="100.0" mnemonicParsing="false" onAction="#login" text="Entra" translateX="360.0" translateY="40.0" />
+            <Label prefHeight="39.0" prefWidth="275.0" style="-fx-alignment: center;" text="LOGIN" textAlignment="CENTER" textFill="#09eb34" translateX="270.0" translateY="60.0">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

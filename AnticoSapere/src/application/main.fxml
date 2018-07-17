@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="800.0" maxWidth="800.0" minHeight="800.0" minWidth="700.0" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <top>
+      <HBox prefHeight="54.0" prefWidth="500.0" translateX="160.0" translateY="54.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="b_aggiorna_elenco" mnemonicParsing="false" onAction="#EVENTO_AggiornaElencoPost" text="Aggiorna" translateX="-130.0" translateY="-40.0" />
+            <Label text="Label" translateX="280.0" translateY="60.0">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <TextField fx:id="t_search1" promptText="Ricerca per titolo" />
+            <Button fx:id="b_search1" mnemonicParsing="false" onAction="#SearchByTitle" text="Cerca" translateX="40.0" />
+            <TextField fx:id="t_search2" promptText="Ricerca per contenuto" translateX="80.0" />
+            <Button fx:id="b_search2" mnemonicParsing="false" onAction="#SearchByText" text="Cerca" translateX="120.0" />
+            <Button mnemonicParsing="false" onAction="#eliminaPostById" text="Elimina" translateX="-485.0" translateY="-40.0" />
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <TextArea fx:id="textPrev" editable="false" maxHeight="218.0" maxWidth="505.0" prefHeight="218.0" prefWidth="505.0" translateX="-22.0" translateY="-140.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <HBox prefHeight="147.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="l_inserisciFile" prefHeight="31.0" prefWidth="323.0" text="  Inserisci nuovo file" textFill="#2fdd83" translateX="360.0" translateY="-300.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <graphic>
+                  <Button fx:id="b_caricaFile" mnemonicParsing="false" onAction="#cercaFile" text="Carica" />
+               </graphic>
+            </Label>
+            <TextField fx:id="t_inserimentoTItolo" promptText="Titolo" translateX="-10.0" translateY="-240.0" />
+            <TextField fx:id="t_inserimentoAutore" promptText="Autore" translateX="10.0" translateY="-240.0" />
+            <Button fx:id="b_inserisciFile" mnemonicParsing="false" onAction="#inserisciFileInDB" text="Inserisci" translateX="-180.0" translateY="-180.0" />
+            <Button fx:id="b_visualizzaPost" minHeight="10.0" mnemonicParsing="false" onAction="#loadHtmlPost" prefHeight="40.0" prefWidth="120.0" text="Visualizza Post" translateX="-265.0" translateY="-90.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <left>
+      <ListView fx:id="list" prefHeight="200.0" prefWidth="200.0" translateX="10.0" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>
